@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,10 +23,39 @@
         "name": "next"
       }
     ],
+    "baseUrl": "",
     "paths": {
-      "@kubie/*": ["./*"]
-    }
+      "@kubie/*": [
+        "app/*"
+      ],
+      "@kubie/hooks/*": [
+        "hooks/*"
+      ],
+      "@kubie/components/*": [
+        "components/*"
+      ],
+      "@kubie/types/*": [
+        "types/*"
+      ],
+      "@kubie/reducers/*": [
+        "reducers/*"
+      ],
+      "@kubie/utils/*": [
+        "utils/*"
+      ],
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/page.jsx",
+    "pages/_app.jsx",
+    "app/auth/AuthContext.jsx",
+    "app/layout.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
