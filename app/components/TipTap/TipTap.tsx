@@ -47,7 +47,7 @@ const Tiptap = () => {
     injectCSS: false,
   });
   if (!editor) {
-    return;
+    return <div />;
   }
 
   const html = editor.getHTML();
